@@ -22,7 +22,7 @@ class _ReorderableListViewWidgetState extends State<ReorderableListViewWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ReorderableListView"),
+        title: const Text("ReorderableListView"),
       ),
       body: ReorderableListView.builder(
         itemBuilder: (context, index) {

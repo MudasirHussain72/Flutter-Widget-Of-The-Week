@@ -9,7 +9,7 @@ class FutureBuilderWidget extends StatefulWidget {
 
 class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   Future<DateTime> futureFunction() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     return DateTime.now();
   }
 
@@ -17,7 +17,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("FutureBuilder"),
+        title: const Text("FutureBuilder"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -27,7 +27,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
             future: futureFunction(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(child: const CircularProgressIndicator());
+                return const Center(child: CircularProgressIndicator());
               } else if (snapshot.connectionState == ConnectionState.active ||
                   snapshot.connectionState == ConnectionState.done) {
                 if (snapshot.hasError) {
