@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/streams_builder_screen.dart';
+import 'package:widgets/country_code_picker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StreamsBuilderScreen(),
+      home: CountryCodePickerWidget(),
     );
   }
 }
